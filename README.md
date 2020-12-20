@@ -1,5 +1,11 @@
 # readsoft-test
 
+## Description
+
+Online store page.
+
+[Git Pages](https://slambeable.github.io/redsoft-test/)
+
 ## Project setup
 ```
 npm install

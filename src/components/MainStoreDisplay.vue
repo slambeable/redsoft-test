@@ -2,9 +2,12 @@
   <div>
     <header class="header">
       <div class="header-wrapper">
-        <img class="logo header-wrapper__logo"
-             src="../assets/images/logo-museum.svg"
-             alt="На главную">
+        <a href="#"
+           class="header-wrapper__link">
+          <img class="logo header-wrapper__logo"
+               src="../assets/images/logo-museum.svg"
+               alt="На главную">
+        </a>
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item"
@@ -36,9 +39,12 @@
     </main>
     <footer class="footer">
       <div class="footer-wrapper">
-        <img class="logo footer-wrapper__logo"
-             src="../assets/images/logo-museum.svg"
-             alt="На главную">
+        <a href="#"
+           class="footer-wrapper__link">
+          <img class="logo footer-wrapper__logo"
+              src="../assets/images/logo-museum.svg"
+              alt="На главную">
+        </a>
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item"
@@ -131,6 +137,7 @@ h2 {
 
   color: $buttons-text;
   background: $buttons-background;
+  cursor: pointer;
   outline: none;
 
   &:hover {
@@ -146,8 +153,13 @@ h2 {
 
 .header-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+
+  margin: auto;
   padding-top: 24px;
+
+  width: 63%;
+  min-width: 1200px;
 }
 
 .logo {
@@ -157,7 +169,8 @@ h2 {
 
 .navigation {
   margin-top: -5px;
-  margin-left: 4%;
+  flex-grow: 0.8;
+  text-align: left;
 
   &__item {
     display: inline;
@@ -217,7 +230,7 @@ h2 {
     padding-top: 24px;
     min-width: 1200px;
 
-    width: 75%;
+    width: 63%;
 
     &__title {
       width: 100%;
@@ -239,8 +252,13 @@ h2 {
 
 .footer-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+
+  margin: auto;
   padding-top: 24px;
+
+  width: 63%;
+  min-width: 1200px;
 }
 
 .contact {

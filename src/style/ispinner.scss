@@ -1,0 +1,37 @@
+@mixin isspiner {
+  .ispinner {
+    margin: auto;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    .ispinner-blade {
+      position: absolute;
+      top: 6.5px;
+      left: 8.5px;
+      width: 2.5px;
+      height: 6.5px;
+      background-color: white;
+      border-radius: 1.25px;
+      animation: iSpinnerBlade 1s linear infinite;
+      will-change: opacity;
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          transform: rotate(#{360deg / 8 * $i}) translateY(-6.5px);
+          animation-delay: 1s / 8 * ($i - 14);
+        }
+      }
+    }
+  }
+
+  @keyframes iSpinnerBlade {
+    0% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 0.25;
+    }
+  }
+}
